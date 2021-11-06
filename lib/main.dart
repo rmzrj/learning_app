@@ -1,33 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:learning_app/Screens/HomeScreen.dart';
-import 'package:learning_app/constants.dart';
+import 'package:vkltwoeighteight/digital_ink_recogniser_view.dart';
+import 'package:vkltwoeighteight/dragMCQ.dart';
+import 'package:vkltwoeighteight/home.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
 
-  @override
-  _MyAppState createState() => _MyAppState();
-}
 
-class _MyAppState extends State<MyApp> {
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'VKL288',
 
-      debugShowCheckedModeBanner: false,
-      title: 'Learning App',
-      theme: ThemeData(
-        primaryColor: bgYellow,
-        scaffoldBackgroundColor: bgYellow,
-        textTheme: Theme.of(context).textTheme.apply(displayColor: primaryText),
-
-      ),
-
-
-      home: HomeScreen(),
+      home: HomePage(),
     );
   }
 }
